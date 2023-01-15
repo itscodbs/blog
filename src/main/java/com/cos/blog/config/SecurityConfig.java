@@ -16,7 +16,6 @@ import com.cos.blog.config.auth.PrincipalDetailService;
 
 @Configuration // 빈등록 : 스프링 컨테이너에서 객체를 관리할 수 있게 하는 것(IoC관리)
 @EnableWebSecurity // security 필터 등록
-//@EnableWebSecurity(prePostEnabled = true) //특정 주소를 접근을 하면 권한 및 인증을 미리 체크하겠다는 뜻
 public class SecurityConfig extends WebSecurityConfiguration {
 
 	@Autowired
@@ -27,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfiguration {
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 
-	@Bean // IoC가 되요!!
+	@Bean
 	public BCryptPasswordEncoder encodePWD() {
 		return new BCryptPasswordEncoder();
 	}
@@ -47,9 +46,11 @@ public class SecurityConfig extends WebSecurityConfiguration {
 			.authorizeHttpRequests()
 			.requestMatchers("/", "/auth/**", "/classpath:/static/js/**", "/css/**", "/image/**", "/dummy/**") 
 			.permitAll()
-			.anyRequest().authenticated()
+			.anyRequest()
+			.authenticated()
 			.and()
-			.formLogin().loginPage("/auth/loginForm")
+			.formLogin()
+			.loginPage("/auth/loginForm")
 			.loginProcessingUrl("/auth/loginProc") // 스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로채서 대신 로그인 해줌.
 			.defaultSuccessUrl("/");
 		return http.build();
