@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "spring.jpa.hibernate.naming.use-new-id-generator-mappings",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.naming.use-new-id-generator-mappings'"
+  },
+  {
+    "name": "spring.jpa.hibernate.show-sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.show-sql'"
+  },
+  {
+    "name": "server.servlet.charset",
+    "type": "java.lang.String",
+    "description": "A description for 'server.servlet.charset'"
+  },
+  {
+    "name": "server.servlet.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'server.servlet.enabled'"
+  },
+  {
+    "name": "server.servlet.force",
+    "type": "java.lang.String",
+    "description": "A description for 'server.servlet.force'"
+  },
+  {
+    "name": "cos.key",
+    "type": "java.lang.String",
+    "description": "A description for 'cos.key'"
+  },
+  {
+    "name": "spring.jpa.hibernate.[format_sql]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.[format_sql]'"
+  },
+  {
+    "name": "spring.jpa.hibernate.naming.[format_sql]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.hibernate.naming.[format_sql]'"
+  }
+]}
