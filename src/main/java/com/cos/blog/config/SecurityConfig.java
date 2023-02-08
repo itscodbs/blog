@@ -14,8 +14,8 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import com.cos.blog.config.auth.PrincipalDetailService;
 
-@Configuration // 빈등록 : 스프링 컨테이너에서 객체를 관리할 수 있게 하는 것(IoC관리)
-@EnableWebSecurity // security 필터 등록
+@Configuration 
+@EnableWebSecurity 
 public class SecurityConfig extends WebSecurityConfiguration {
 
 	@Autowired
