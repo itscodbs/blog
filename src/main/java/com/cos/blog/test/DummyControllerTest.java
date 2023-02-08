@@ -69,10 +69,6 @@ public class DummyControllerTest {
 			@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 		Page<User> pagingUser = userRepository.findAll(pageable);
 
-//		if(pagingUser.isFirst()) { // ifLast()
-//			
-//		}
-
 		List<User> users = pagingUser.getContent();
 		return users;
 	}
