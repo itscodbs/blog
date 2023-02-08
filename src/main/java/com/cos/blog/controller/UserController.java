@@ -25,8 +25,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // 인증이 안된 사용자들이 출입할 수 있는 경로를 /auth/** 허용
-// 그냥 주소가 / 이면 index.jsp 허용
-// static이하에 있는 /js/**, /css/**, /image/**
 
 @Controller
 public class UserController {
@@ -52,12 +50,7 @@ public class UserController {
 	
 	@GetMapping("/auth/kakao/callback")
 	public String kakaoCallback(String code) { // Data를 리턴해주는 컨트롤러 함수
-		
-		// POST방식으로 key=value 데이터를 요청 (카카오쪽으로)
-		// Retrofit2
-		// OkHttp
-		// RestTemplate
-		
+
 		RestTemplate rt = new RestTemplate();
 		
 		// HttpHeader 오브젝트 생성
